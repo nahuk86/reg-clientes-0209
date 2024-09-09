@@ -5,7 +5,7 @@ document.getElementById('consultaForm').addEventListener('submit', async (event)
     const resultadoDiv = document.getElementById('resultado');
 
     try {
-        const response = await fetch(`/api/clientes/${clienteId}`);
+        const response = await fetch(`http://localhost:5131/api/clientes/${clienteId}`);
         if (response.ok) {
             const cliente = await response.json();
             resultadoDiv.innerHTML = `
